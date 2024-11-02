@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sla</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <form class="tela">
+        <h1>login</h1>
+        <input class="texto" type="text" placeholder="usuario" id="usuario">
+        <input class="senha" type="password" placeholder="senha" id="senha">
+        <button class="fsenha" onclick="fsenha(); return false "> não sei a senha</button>
+        <input class="button" type="submit" value="logar" onclick="logar(); return false">
+    </form>
+    
+    <script>
+        function logar(){
+            var login = document.getElementById('usuario').value;
+            var senha = document.getElementById('senha').value;
+            if(login == "mercedes" && senha == "volei"){
+                location.href = "home.html";
+            }
+            else if(login == "toyota" && senha == "bola"){
+                location.href = "home.html";
+            }
+            else if(login == "audi" && senha == "bola"){
+                location.href = "home.html";
+            }
+            else{
+                alert("usuario ou senha errados")
+            }
+        }
+        function fsenha(){
+            location.href = "usuarios.html"
+        }
+
+    </script>
+</body>
+</html>
